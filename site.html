@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding</title>
+    <style>
+        body {
+            font-size: xx-large;
+            font-family: Georgia;
+            margin: 0;
+            padding: 0;
+            background: url({{ url_for('static', filename='photo_2024-02-20_21-39-36.jpg') }});
+    		background-repeat: no-repeat;
+    		background-size: 100%;
+			padding-bottom: 0px;
+        }
+        
+        header {
+            background-color: rgba(255, 255, 255, 0.6);
+    
+            font-size: x-large;
+            padding: 20px;
+            text-align: center;
+            font-family: Georgia; 
+        }
+
+        nav {
+            background-color:rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            text-align: center;
+            font-family: Georgia;
+            background-size: cover;
+            background-position: top;
+            color: #6a6969;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff90;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-size-adjust: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+
+        input[type="radio"] {
+            margin-right: 5em;
+        }
+
+        button {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        nav a {
+            color: #393939;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #000000;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.46);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(16px);
+        }
+        
+        #top {
+            margin-top: 500px;
+        }
+
+        .пожелания-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .локация-container {
+            max-width: fit-content;
+        }
+
+        .подробно-container {
+            max-width: fit-content;
+        }
+
+        div.field {
+            padding-bottom: 5px;
+         }
+        div.field label {
+            font-size: large;
+            float: none;
+            width: 70px;
+            height: 25px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #f3e2b9;
+            color: #fffdfd;
+            padding: 20px;
+            text-align: center;
+            height: 1%;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Тимур и Ситора</h1>
+    </header>
+
+    <nav>
+        <a href="#Приглашение">Приглашение</a>
+        <a href="#Пожелания">Пожелания</a>
+        <a href="#Локация">Локация</a>
+        <a href="#Подробно">Подробно</a>
+    </nav>
+
+    <section id="Приглашение">
+        <div class="container" id="top">
+            <h2>Приглашение</h2>
+            <p>Мы счастливы объявить, что скоро станем семьёй!
+				Этот день будет для нас особенным и мы очень хотим разделить его с близкими и друзьями!
+				Будем безмерно рады видеть вас на нашей свадьбе, где две половинки станут одним целым. 
+				Зарядитесь позитивом, весельем и любовью, создавая вместе воспоминания, которые будут согревать нас всю нашу совместную жизнь!
+			</p>
+            
+        </div>
+    </section>
+
+    <section id="Пожелания">
+        <div class="Пожелания container">
+            <h2>Пожелания</h2>
+
+            <form action="" method="post">
+                <h2>
+                    Проголосуйте!
+                </h2>
+                <label>
+                    <input type="checkbox" name="will_come"> Приеду
+                </label>
+                <label>
+                    <input type="checkbox" name="wont_come"> Не приеду
+                </label>
+
+                <div class="field">
+                    <label>Ваше имя</label>
+                    <input type="text" name="IMYA" />
+                </div>
+                <div class="field">
+                    <label></label>
+                    <input type="submit" value="SUBMIT">
+                </div>
+            
+            </form>
+           </div> 
+    </section>
+            
+    <section id="Локация">
+        <div class="Локация container">
+            <h2>Локация</h2>
+                    
+            <iframe  
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.012616276986!2d30.293740444091707!3d59.915337963191924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630f060a018f1%3A0x9d2dc8d240b24688!2zR3JhZiBaZXBwZWxpbiDQv9Cw0L3QvtGA0LDQvNC90YvQuSDRgNC10YHRgtC-0YDQsNC9INGB0L7QsdGL0YLQuNC5!5e0!3m2!1sru!2sru!4v1708953147632!5m2!1sru!2sru" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                
+            </iframe>
+        </div>
+    </section>
+
+    <section id="Подробно">
+        <div class="Подробно container">
+            <h2>Подробно</h2>
+            <p>Дата 24.04.24</p>
+            <p>Время сбора гостей 16:30 </p>
+            <p>Начало банкета 17:00 </p> 
+            <p>Дресс код: Костюмы на мужчинах и вечерние платья на дамах  в светлых тонах только приветствуются.</p> 
+            <p>По всем вопросам, касающимся свадьбы, обращаться к нашему организатору Светлане (+79219182293) </p>
+            <p>Устали думать, что нам подарить? Подарите конверт! Он точно поможет сделать реальностью нашу мечту</p>
+            <p>Будем очень признательны, если вы сообщите нам о своём решении по телефону или любым удобным для вас способом до 01.04.24</p>
+        </div>
+    </section>
+        
+
+    <footer>
+        <p>&copy; 2024 Тимур и Ситора. All rights reserved.</p>
+    </footer>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+            
